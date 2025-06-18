@@ -55,8 +55,8 @@ export const ServerCard: React.FC<ServerCardProps> = ({ metrics }) => {
         </div>
 
         <div className="space-y-4">
-          <div className="grid grid-cols-3 gap-3">
-            <div>
+          <div className="grid grid-cols-12 gap-3">
+            <div className="col-span-3">
               <div className="flex items-center gap-1 text-gray-600 mb-1">
                 <Cpu className="w-4 h-4" />
                 <span className="text-xs">CPU</span>
@@ -66,7 +66,7 @@ export const ServerCard: React.FC<ServerCardProps> = ({ metrics }) => {
               </p>
             </div>
 
-            <div>
+            <div className="col-span-4">
               <div className="flex items-center gap-1 text-gray-600 mb-1">
                 <Activity className="w-4 h-4" />
                 <span className="text-xs">Memory</span>
@@ -81,7 +81,7 @@ export const ServerCard: React.FC<ServerCardProps> = ({ metrics }) => {
               )}
             </div>
 
-            <div>
+            <div className="col-span-5">
               <div className="flex items-center gap-1 text-gray-600 mb-1">
                 <HardDrive className="w-4 h-4" />
                 <span className="text-xs">Disk</span>
