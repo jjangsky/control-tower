@@ -7,29 +7,29 @@
 ```mermaid
 graph TB
     subgraph "모니터링 대상 서버들"
-        S1[서버 1<br/>Node Exporter:9100]
-        S2[서버 2<br/>Node Exporter:9100]
-        S3[서버 N<br/>Node Exporter:9100]
+        S1["서버 1<br/>Node Exporter:9100"]
+        S2["서버 2<br/>Node Exporter:9100"]
+        S3["서버 N<br/>Node Exporter:9100"]
     end
     
     subgraph "메트릭 수집 서버"
-        P[Prometheus<br/>:9090]
+        P["Prometheus<br/>:9090"]
     end
     
     subgraph "웹 애플리케이션"
-        R[React Dashboard<br/>Control Tower]
+        R["React Dashboard<br/>Control Tower"]
     end
     
     subgraph "사용자"
-        U[웹 브라우저]
+        U["웹 브라우저"]
     end
     
-    S1 -->|메트릭 수집| P
-    S2 -->|메트릭 수집| P
-    S3 -->|메트릭 수집| P
+    S1 -->|"메트릭 수집"| P
+    S2 -->|"메트릭 수집"| P
+    S3 -->|"메트릭 수집"| P
     
-    P -->|HTTP API<br/>PromQL 쿼리| R
-    R -->|HTTPS| U
+    P -->|"HTTP API<br/>PromQL 쿼리"| R
+    R -->|"HTTPS"| U
     
     style S1 fill:#e1f5e1
     style S2 fill:#e1f5e1
