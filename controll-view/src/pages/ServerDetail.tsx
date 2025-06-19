@@ -101,20 +101,19 @@ export const ServerDetail: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex items-center gap-4">
-              <Link
-                to="/"
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-                <span>뒤로가기</span>
-              </Link>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">{metrics?.alias || decodedHostname}</h1>
-                {metrics?.alias && <p className="text-gray-500 text-sm">{decodedHostname}</p>}
-                <p className="text-gray-600 mt-1">서버 상세 모니터링</p>
-              </div>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-4"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span>뒤로가기</span>
+          </Link>
+          
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">{metrics?.alias || decodedHostname}</h1>
+              {metrics?.alias && <p className="text-gray-500 text-sm">{decodedHostname}</p>}
+              <p className="text-gray-600 mt-1">서버 상세 모니터링</p>
             </div>
             <button
               onClick={() => refetchMetrics()}
