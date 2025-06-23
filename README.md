@@ -220,8 +220,3 @@ sum(node_filesystem_size_bytes{fstype!~"tmpfs|devtmpfs|iso9660|squashfs"}) * 100
 
 MIT License - 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
 
-## 👥 문의
-
-문화콘텐츠개발부 - [이메일]
-
-프로젝트 링크: [https://github.com/your-username/controll-tower](https://github.com/your-username/controll-tower)
