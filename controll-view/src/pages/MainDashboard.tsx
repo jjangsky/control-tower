@@ -118,7 +118,7 @@ export const MainDashboard: React.FC = () => {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">문화콘텐츠 개발부 관제탑</h1>
+              <h1 className="text-3xl font-bold text-gray-900">서버 관제탑</h1>
               <p className="text-gray-600 mt-2">실시간 서버 상태 모니터링</p>
             </div>
             <button
