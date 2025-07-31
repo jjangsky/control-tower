@@ -175,6 +175,27 @@ cd node_exporter-1.7.0.linux-amd64
 ./node_exporter
 ```
 
+##### port 변경
+
+![](https://github.com/user-attachments/assets/b8187f6b-efbf-408a-b412-f2cc8c2393d0)
+
+```bash
+sudo vi /etc/systemd/system/node_exporter.service
+```
+
+![](https://github.com/user-attachments/assets/e3b9034c-9713-455f-a716-2900313215d6)
+```bash
+--web.listen-address=":8100"
+```
+
+위와 같이 변수를 추가
+이후 데몬 리로드 & 재시작
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart node_exporter
+```
+
 ## 📊 수집 메트릭 상세
 
 ### CPU 메트릭
